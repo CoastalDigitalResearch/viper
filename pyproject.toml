@@ -1,10 +1,9 @@
 [project]
-name = "mamba_ssm"
-description = "Mamba state-space model"
+name = "viper"
+description = "Viper: Hierarchically-Sparse Mixture State-Space Model"
 readme = "README.md"
 authors = [
-    { name = "Tri Dao", email = "tri@tridao.me" },
-    { name = "Albert Gu", email = "agu@cs.cmu.edu" }
+    { name = "Coastal Digital Research", email = "admin@coastaldigital.ai" }
 ]
 requires-python = ">= 3.9"
 dynamic = ["version"]
@@ -32,7 +31,14 @@ causal-conv1d = [
     "causal-conv1d>=1.2.0"
 ]
 dev = [
-    "pytest"
+    "pytest",
+    "hypothesis"
+]
+viper = [
+    "muon",
+    "jax[cuda]", 
+    "alpa",
+    "flash-attention==2.5.2"
 ]
 
 
